@@ -1,0 +1,18 @@
+# Start vom Basis-Image
+FROM akeneo/pim-php-dev:8.1
+
+# Arbeitsverzeichnis im Container setzen
+WORKDIR /srv/pim
+
+# Kopieren Sie alle lokalen Dateien in das Arbeitsverzeichnis des Containers
+COPY . /srv/pim
+
+# Composer install ausführen
+RUN php /usr/local/bin/composer install 
+
+# PIM initialisieren
+RUN bin/docker/pim-dependencies.sh
+RUN bin/docker/pim-initialize.sh
+
+# Port auf dem der Server laufen wird
+EXPOSE 8080
