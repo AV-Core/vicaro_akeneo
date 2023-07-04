@@ -1,13 +1,13 @@
 version: '3.4'
 services:
-  mysql:
-    image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: akeneo_pim
-      MYSQL_USER: akeneo_pim
-      MYSQL_PASSWORD: akeneo_pim
+   mysql:
+     image: mysql:8.0
+     command: --default-authentication-plugin=mysql_native_password
+     environment:
+       MYSQL_ROOT_PASSWORD: Zh9bpksKqgnyZcEcXriqR8PfdcQHxQrO
+       MYSQL_DATABASE: mysql
+       MYSQL_USER: mysql
+       MYSQL_PASSWORD: iCuyl230zUyR5X833FLcFTQKFjYi3Mkd
   php:
     image: akeneo/fpm:php-7.3
     depends_on:
