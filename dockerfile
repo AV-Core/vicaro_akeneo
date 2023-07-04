@@ -19,3 +19,6 @@ EXPOSE 8080
 
 # Starte den Server
 CMD ["php", "-S", "0.0.0.0:8080"]
+
+# PIM initialisieren
+RUN ./pim-dependencies.sh
